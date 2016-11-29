@@ -1,0 +1,29 @@
+{
+  "name": "race4",
+  "version": "1.0.0",
+  "description": "Typing Game",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwimmer123/typeStars.git"
+  },
+  "keywords": [
+    "typing",
+    "game"
+  ],
+  "author": "Noah Wimmer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nwimmer123/typeStars/issues"
+  },
+  "homepage": "https://github.com/nwimmer123/typeStars#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "html": "^1.0.0",
+    "nodemon": "^1.11.0"
+  }
+}

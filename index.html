@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+	  <title>Type to the Stars</title>
+
+		<!-- CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+		<link rel="stylesheet" href="css/main.css">
+
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
+		
+    <!-- JS -->
+    <script src="js/main.js"></script>
+    <script src="js/randomWords.js"></script>
+
+    <!-- FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Geostar" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Geostar|Krona+One" rel="stylesheet">
+
+	</head>
+
+	<body>
+    <h1 class="header text-center">Type to the Stars!!!</h1>
+
+    <!-- Player Select -->
+    <div class="select container col-sm-6" id="intro">
+      <h4>How many players?</h4>
+      <div class="input-group">
+        <input type="text" class="form-control" id="playerCount">
+        <span class="btn input-group-addon" id="playerCountBtn">Enter</span>
+      </div>
+      <p id="lowerIntro">no more then 4 can play at once</p> 
+    </div>
+
+    <!-- Avatar Select -->
+    <div class="select" id="avatar">
+      <h4 id="numPlayers"></h4>
+      <h4>Please enter your name.</h4>
+      <input type="text" id="playerName">
+      <h4>And Select Your Ship</h4>
+      <img class="avatars" id="spaceship1" src="images/spaceship1.png">
+      <img class="avatars" id="spaceship2" src="images/spaceship2.png">
+      <img class="avatars" id="spaceship3" src="images/spaceship3.png">
+      <img class="avatars" id="spaceship4" src="images/spaceship4.png">
+      <button class="btn btn-primary" id="submitPlayer">Submit</button>
+    </div>
+
+    <!-- Instructions -->
+    <div class="select container col-sm-6 text-center" id="instructions">
+      <h4 id="instructionsName"></h4>
+      <p>Your ship is powered by your typing skills. You will have 45 seconds to type as many words as possible. As soon as the word is typed correctly, then another word will appear. Keep playing and see if you can travel farther!</p>
+      <p>Choose your difficulty level.</p>
+      <select type="text" id="difficulty">
+        <option value="baby">Baby</option>
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+        <option value="insane">Insane</option>
+      </select>
+      <br>
+      <p>What language would you like to play in?</p>
+      <select type="text" id="language">
+          <option value="usa2">English</option>
+          <option value="japanese">Japanese</option>
+          <option value="nederlands3">Dutch</option>
+          <option value="italiano">Italian</option>
+      </select>
+      <br>
+      <h4>Are you ready!</h4>
+      <h4 id="readyPlayer"><h4>
+      <button type="button" class="btn btn-warning" id="start">START</button>
+    </div>
+
+    <!-- End Game -->
+    <div class="container col-sm-6 center" id="endGame">
+      <h2 id="finalScore"></h2>
+      <h4 id="winMessage"></h4>
+    </div>
+
+    <!-- Reset -->
+    <div class="container col-sm-6 center" id="gameReset">
+      <p>If you would like to try again, please hit the reset button, or travel elsewhere!</p>
+      <button class="btn btn-primary" id="reset">RESET</button>
+      <a href="http://noahwimmer.com" class="btn btn-danger" id="reset">ELSEWHERE</a>
+    </div>
+
+    <!-- Target Word Display -->
+    <div class="wordDisplay text-center center-block"> 
+      <p class="center-block wordIntro">Your word is:</p>
+      <div class="toType center-block"></div>
+    </div>
+
+    <!-- Ships track-->
+    <div class="board">
+      <div class="player"></div>
+    </div>
+
+    <!-- Word Input-->
+    <div class="input-group">
+      <input  type="text" id="word">
+    </div>
+
+
+    <!-- Background -->
+    <div align="center"><img src="images/starfield.jpeg" class="background"></div>
+
+	</body>
+</html>
