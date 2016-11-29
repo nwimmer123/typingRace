@@ -1,7 +1,4 @@
 $(document).ready(function(){
-
-  //setup initial word list
-  //generateWords();
   
   //set default name for Create Player div 
   $("#numPlayers").text(tempPlayer);
@@ -18,7 +15,6 @@ $(document).ready(function(){
   $("#start").on("click", function() {
     getAttributes();
     getTxt();
-    
   })
 
   //RESET button
@@ -60,7 +56,6 @@ function playerSelector() {
 };
 
 // ** PLAYER CREATION FUNCTIONS ** \\
-
 var playerCounter = 1;
 var tempPlayer = "Player 1";
 function multiPlayerCreation() { 
@@ -199,15 +194,6 @@ function filterByLength(obj) {
   }
 };
 
-//populate array w different words for each game
-// var gameWords = [];
-// function generateWords() {
-//   shuffle(words);
-//   for(var i = 0; i < 50; i ++) {
-//     gameWords.push(words[i]);
-//    }
-// }
-
     // ** RUNNING GAME FUNCTIONS ** \\
 
 //hides instructions and reveals game
@@ -299,9 +285,9 @@ var currentScore;
 var singleWinMessage;
 function generateWinMessage() {
   currentScore = playerInfo[currentPlayer].score[0];
-  if (currentScore > 3000 ){
+  if (currentScore > 6000 ){
     singleWinMessage = "Holy nebula, " + playerInfo[currentPlayer].name + "!!!! You're amazing!!!"
-  }else if(currentScore > 1000){
+  }else if(currentScore > 4000){
     singleWinMessage = "You're pretty good, " + playerInfo[currentPlayer].name + "!"
   }else{
     singleWinMessage = "Hmmm, you definetley need to keep playing this game. Keep at it " + playerInfo[currentPlayer].name + "!"
