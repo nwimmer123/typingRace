@@ -223,7 +223,6 @@ $(function wordChecker(){
   $(document).keyup(function(e){
     var targetWord = $(".toType").text();
     var typedWord = $("#word").val();
-    console.log("j = " + j);
     if(typedWord === targetWord){
       $(".player").css({left: "+=15px",});
       targetWord = $(".toType").text(gameWords[j]);
